@@ -64,7 +64,4 @@ Para poder desplazar la información estan como apoyo las teclas barra espaciado
 A continuación se muestra un ejemplo:
 
 
-<script src="https://asciinema.org/a/cjYTrbDnVdoC2RcGoC9Motpqc.js" id="asciicast-cjYTrbDnVdoC2RcGoC9Motpqc" async></script>
-
-
 
