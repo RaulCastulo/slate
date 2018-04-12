@@ -1,8 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'jekyll-theme-slate'
-  s.version       = '0.1.1'
-  s.license       = 'CC0-1.0'  
-  s.homepage      = 'https://raulcastulo.github.io/'
+  s.homepage      = 'https://https://github.com/RaulCastulo/slurm-watch-usuarios/'
   s.summary       = 'Slate is a Jekyll theme for GitHub Pages'
 
   s.files         = `git ls-files -z`.split("\x0").select do |f|
