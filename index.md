@@ -1,123 +1,70 @@
----
-layout: default
----
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+## 1. Objetivos de la aplicación.
 
-[Link to another page](./another-page.html).
+Mostrar información correspondiente a los trabajos que el usuario tiene alojados en el nodo Yoltla para poder tener una mejor administración de éstos. 
 
-There should be whitespace between paragraphs.
+**Modo de impresión**
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+La información se despliega a través de la terminal en la que se ha sido ejecutada la aplicación.
 
 
-### Definition lists can be used with HTML syntax.
+## 2. Acceso a la aplicación.
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+La aplicación permite recibir opciones al momento de su ejecución, mismos que se explican a continuación:
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+|Opción | Función | 
+| ------ | ------ |
+| -h | Muestra en mensaje de ayuda. |
+| -A | Muestra información de trabajos del usuario, colaboradores y alumnos. |
+|-tR | Muestra información de trabajos del usuario que se encuentran en ejecución. |
+|-tPD | Muestra información de trabajos del usuario que estan pendientes. |
+|-l | Muestra información de trabajos del usuario en ejecución y trabajos pendientes. |
+|-p | Imprime información acerca de los trabajos en ejecución y trabajos pendientes en la terminal. |
 
-```
-The final element.
-```
+Esta opción sólo esta permitida en modo administrador. 
+
+| Opción | Función |
+| ------ | ------ |
+| -u USERNAME, --username USERNAME | Permite visualizar la información de los trabajos del usuario <USERNAME> |
+
+Se pueden proporcionar varios nombres de usuario separando a cada uno por "," y sin espacios, ejemplo:
+
+`
+user@hostname:~$ slurm-watch -u user1,user2,user3,user4
+`
+
+## 3. Opciones durante la ejecución de la aplicación.
+
+La aplicación cuenta con teclas especiales que pueden ser utilizadas durante la ejecución de ésta.  
+
+| Tecla | Función | 
+| ------ | ------ |
+| q | Salir de la aplicación, o de la ventana en la que se encuentra actualmente. |
+| Enter | Ver información acerca del trabajo que actualmente se encuentre seleccionado.|
+| u | Muestra información de todos los trabajos en ejecucion y trabajos pendientes del usuario. |
+| r | Ver información de los trabajos en ejecución del usuario.|
+| p | Permite ver información de los trabajos pendientes del usuario. |
+| l | Muestra información de todos los trabajos en ejecucion y trabajos pendientes del usuario. | 
+| h	| Despliega una ventana de ayuda. |
+
+
+Funciones de las teclas especiales en modo administrador.
+
+| Tecla | Función |
+| ------- | ------- |
+| Enter | Despliega información acerca del trabajo que actualmente se encuentre seleccionado.|
+| u | Ver información de todos los trabajos en ejecución y trabajos pendientes del usuario que actualmente se encuentra seleccionado. |
+| r | Permite ver información de todos los trabajos que se encuentran en ejecución. |
+| p | Muestra información de todos los trabajos pendientes. |
+| l | Muestra información de todos los trabajos que se encuentran en ejecución y trabajos pendientes. |
+
+Nota:
+Para poder desplazar la información estan como apoyo las teclas barra espaciadora, Re Pág y Av Pág.
+
+A continuación se muestra un ejemplo:
+
+
+<script src="https://asciinema.org/a/cjYTrbDnVdoC2RcGoC9Motpqc.js" id="asciicast-cjYTrbDnVdoC2RcGoC9Motpqc" async></script>
+
+
+
